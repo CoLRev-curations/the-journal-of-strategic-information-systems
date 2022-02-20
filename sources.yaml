@@ -1,0 +1,16 @@
+- filename: pdfs.bib
+  search_type: LOCAL_PAPER_INDEX
+  source_name: JSIS
+  source_url: /home/gerit/ownCloud/data/journals/JSIS
+  search_parameters: NA
+  comment: NA
+  outlet: journal=The Journal of Strategic Information Systems
+  sub_dir_pattern: volume_number
+- filename: corrections.bib
+  search_type: OTHER
+  source_name: corrections
+  source_url: corrections.bib
+  search_parameters: ''
+  comment: ''
+  outlet: null
+  sub_dir_pattern: null
