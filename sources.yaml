@@ -2,7 +2,16 @@
   search_type: FEED
   source_name: The Journal of Strategic Information Systems
   source_url: ''
-  search_parameters: 
-    - endpoint: dblp
-      params: SCOPE venue_key='journals/jsis' AND journal_abbreviated='J. Strateg. Inf. Syst.'
+  search_parameters:
+  - endpoint: dblp
+    params: SCOPE venue_key='journals/jsis' AND journal_abbreviated='J. Strateg. Inf.
+      Syst.'
+  last_sync: null
+  comment: ''
+- filename: CROSSREF.bib
+  search_type: FEED
+  source_name: CROSSREF
+  source_url: CROSSREF.bib
+  search_parameters: ''
+  last_sync: null
   comment: ''
