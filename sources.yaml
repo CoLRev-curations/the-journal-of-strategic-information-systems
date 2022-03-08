@@ -1,0 +1,8 @@
+- filename: DBLP.bib
+  search_type: FEED
+  source_name: The Journal of Strategic Information Systems
+  source_url: ''
+  search_parameters: 
+    - endpoint: dblp
+      params: SCOPE venue_key='journals/jsis' AND journal_abbreviated='J. Strateg. Inf. Syst.'
+  comment: ''
