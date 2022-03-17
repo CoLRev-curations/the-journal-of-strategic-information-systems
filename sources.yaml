@@ -15,3 +15,11 @@
   search_parameters: ''
   last_sync: null
   comment: ''
+- filename: pdfs.bib
+  search_type: FEED
+  source_name: JSIS
+  source_url: pdfs
+  search_parameters:
+  - endpoint: pdfs_directory
+    params: SCOPE path='pdfs' WITH journal='The Journal of Strategic Information Systems' AND sub_dir_pattern='volume_number'
+  comment: NA
