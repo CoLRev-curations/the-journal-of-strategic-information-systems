@@ -4,6 +4,7 @@
         "review_type": "NA",
         "share_stat_req": "processed",
         "delay_automated_processing": true,
+        "curation_url": "https://github.com/geritwagner/the-journal-of-strategic-information-systems",
         "curated_masterdata": true,
         "curated_fields": [
             "doi",
@@ -117,7 +118,8 @@
     },
     "dedupe": {
         "merge_threshold": 0.8,
-        "partition_threshold": 0.5
+        "partition_threshold": 0.5,
+        "same_source_merges": "prevent"
     },
     "prescreen": {
         "plugin": null,
