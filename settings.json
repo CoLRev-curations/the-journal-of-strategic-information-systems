@@ -12,43 +12,54 @@
             "dblp_key"
         ]
     },
-    "search": {
-        "sources": [
-            {
-                "filename": "search/DBLP.bib",
-                "search_type": "FEED",
-                "source_name": "DBLP",
-                "source_identifier": "{{dblp_key}}",
-                "search_parameters": "SCOPE venue_key='journals/jsis' AND journal_abbreviated='J. Strateg. Inf. Syst.'",
-                "script": {
-                    "endpoint": "bib_pybtex"
-                },
-                "comment": ""
+    "sources": [
+        {
+            "filename": "search/DBLP.bib",
+            "search_type": "FEED",
+            "source_name": "DBLP",
+            "source_identifier": "{{dblp_key}}",
+            "search_parameters": "SCOPE venue_key='journals/jsis' AND journal_abbreviated='J. Strateg. Inf. Syst.'",
+            "search_script": {
+                "endpoint": "search_dblp"
             },
-            {
-                "filename": "search/pdfs.bib",
-                "search_type": "FEED",
-                "source_name": "PDFs",
-                "source_identifier": "{{file}}",
-                "search_parameters": "SCOPE path='pdfs' WITH journal='The Journal of Strategic Information Systems' AND sub_dir_pattern='volume_number'",
-                "script": {
-                    "endpoint": "bib_pybtex"
-                },
-                "comment": ""
+            "conversion_script": {
+                "endpoint": "bibtex"
             },
-            {
-                "filename": "search/CROSSREF.bib",
-                "search_type": "FEED",
-                "source_name": "CROSSREF",
-                "source_identifier": "https://api.crossref.org/works/{{doi}}",
-                "search_parameters": "SCOPE journal_issn='1466-4437'",
-                "script": {
-                    "endpoint": "bib_pybtex"
-                },
-                "comment": ""
-            }
-        ]
-    },
+            "source_prep_scripts": [],
+            "comment": ""
+        },
+        {
+            "filename": "search/pdfs.bib",
+            "search_type": "FEED",
+            "source_name": "PDFs",
+            "source_identifier": "{{file}}",
+            "search_parameters": "SCOPE path='pdfs' WITH journal='The Journal of Strategic Information Systems' AND sub_dir_pattern='volume_number'",
+            "search_script": {
+                "endpoint": "search_pdfs_dir"
+            },
+            "conversion_script": {
+                "endpoint": "bibtex"
+            },
+            "source_prep_scripts": [],
+            "comment": ""
+        },
+        {
+            "filename": "search/CROSSREF.bib",
+            "search_type": "FEED",
+            "source_name": "CROSSREF",
+            "source_identifier": "https://api.crossref.org/works/{{doi}}",
+            "search_parameters": "SCOPE journal_issn='1466-4437'",
+            "search_script": {
+                "endpoint": "search_crossref"
+            },
+            "conversion_script": {
+                "endpoint": "bibtex"
+            },
+            "source_prep_scripts": [],
+            "comment": ""
+        }
+    ],
+    "search": {},
     "load": {},
     "prep": {
         "fields_to_keep": [],
@@ -359,9 +370,6 @@
             },
             {
                 "endpoint": "local_index"
-            },
-            {
-                "endpoint": "website_screenshot"
             },
             {
                 "endpoint": "website_screenshot"
