@@ -15,7 +15,7 @@
     "sources": [
         {
             "filename": "search/DBLP.bib",
-            "search_type": "FEED",
+            "search_type": "DB",
             "source_name": "DBLP",
             "source_identifier": "{{dblp_key}}",
             "search_parameters": "SCOPE venue_key='journals/jsis' AND journal_abbreviated='J. Strateg. Inf. Syst.'",
@@ -30,7 +30,7 @@
         },
         {
             "filename": "search/pdfs.bib",
-            "search_type": "FEED",
+            "search_type": "PDFS",
             "source_name": "PDFs",
             "source_identifier": "{{file}}",
             "search_parameters": "SCOPE path='pdfs' WITH journal='The Journal of Strategic Information Systems' AND sub_dir_pattern='volume_number'",
@@ -45,7 +45,7 @@
         },
         {
             "filename": "search/CROSSREF.bib",
-            "search_type": "FEED",
+            "search_type": "DB",
             "source_name": "CROSSREF",
             "source_identifier": "https://api.crossref.org/works/{{doi}}",
             "search_parameters": "SCOPE journal_issn='1466-4437'",
