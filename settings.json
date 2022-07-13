@@ -1,7 +1,7 @@
 {
     "project": {
-        "id_pattern": "THREE_AUTHORS_YEAR",
         "review_type": "curated_masterdata",
+        "id_pattern": "THREE_AUTHORS_YEAR",
         "share_stat_req": "processed",
         "delay_automated_processing": true,
         "curation_url": "https://github.com/geritwagner/the-journal-of-strategic-information-systems",
@@ -414,7 +414,7 @@
         ]
     },
     "screen": {
-        "criteria": [],
+        "criteria": {},
         "scripts": [
             {
                 "endpoint": "colrev_cli_screen"
@@ -422,6 +422,6 @@
         ]
     },
     "data": {
-        "data_format": []
+        "scripts": []
     }
 }
