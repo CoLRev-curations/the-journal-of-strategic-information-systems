@@ -2,7 +2,7 @@ default_language_version:
     python: python3
 repos:
 -   repo: https://github.com/geritwagner/colrev-hooks
-    rev: 512b653834cc57042f6e02b63785a84c316d6194
+    rev: 7b92b16a6690c2de01212fc5c54e746ad10c0460
     hooks:
     -   id: format
         name: "ReviewManager: format"
