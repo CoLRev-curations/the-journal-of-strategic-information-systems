@@ -379,9 +379,6 @@
             },
             {
                 "endpoint": "local_index"
-            },
-            {
-                "endpoint": "website_screenshot"
             }
         ],
         "man_pdf_get_scripts": [
@@ -415,6 +412,7 @@
         ]
     },
     "screen": {
+        "explanation": null,
         "criteria": {},
         "scripts": [
             {
