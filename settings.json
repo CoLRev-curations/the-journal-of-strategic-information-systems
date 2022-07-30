@@ -230,12 +230,19 @@
         "same_source_merges": "prevent",
         "scripts": [
             {
-                "endpoint": "active_learning_training"
+                "endpoint": "curation_full_outlet_dedupe",
+                "selected_source": "search/CROSSREF.bib"
             },
             {
-                "endpoint": "active_learning_automated",
-                "merge_threshold": 0.8,
-                "partition_threshold": 0.5
+                "endpoint": "curation_full_outlet_dedupe",
+                "selected_source": "search/DBLP.bib"
+            },
+            {
+                "endpoint": "curation_full_outlet_dedupe",
+                "selected_source": "search/pdfs.bib"
+            },
+            {
+                "endpoint": "curation_missing_dedupe"
             }
         ]
     },
