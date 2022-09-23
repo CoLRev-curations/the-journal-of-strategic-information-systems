@@ -1,5 +1,20 @@
 {
     "project": {
+        "title": "the-journal-of-strategic-information-systems",
+        "authors": [
+            {
+                "name": "Gerit Wagner",
+                "initials": "GW",
+                "email": "gerit.wagner@hec.ca",
+                "orcid": null,
+                "contributions": [],
+                "affiliations": null,
+                "funding": [],
+                "identifiers": []
+            }
+        ],
+        "keywords": [],
+        "protocol": null,
         "review_type": "curated_masterdata",
         "id_pattern": "three_authors_year",
         "share_stat_req": "processed",
@@ -10,52 +25,57 @@
             "doi",
             "url",
             "dblp_key"
-        ]
+        ],
+        "colrev_version": "0.5.0"
     },
     "sources": [
         {
-            "filename": "search/DBLP.bib",
+            "filename": "data/search/DBLP.bib",
             "search_type": "DB",
-            "source_name": "DBLP",
+            "source_name": "dblp",
             "source_identifier": "{{dblp_key}}",
-            "search_parameters": "SCOPE venue_key='journals/jsis' AND journal_abbreviated='J. Strateg. Inf. Syst.'",
-            "search_script": {
-                "endpoint": "search_dblp"
+            "search_parameters": {
+                "scope": {
+                    "venue_key": "journals/jsis",
+                    "journal_abbreviated": "J. Strateg. Inf. Syst."
+                }
             },
-            "conversion_script": {
+            "load_conversion_script": {
                 "endpoint": "bibtex"
             },
-            "source_prep_scripts": [],
             "comment": ""
         },
         {
-            "filename": "search/pdfs.bib",
+            "filename": "data/search/pdfs.bib",
             "search_type": "PDFS",
-            "source_name": "PDFs",
+            "source_name": "pdfs_dir",
             "source_identifier": "{{file}}",
-            "search_parameters": "SCOPE path='pdfs' WITH journal='The Journal of Strategic Information Systems' AND sub_dir_pattern='volume_number'",
-            "search_script": {
-                "endpoint": "search_pdfs_dir"
+            "search_parameters": {
+                "scope": {
+                    "subdir_pattern": "volume_number",
+                    "type": "journal",
+                    "journal": "The Journal of Strategic Information Systems",
+                    "path": "pdfs"
+                }
             },
-            "conversion_script": {
+            "load_conversion_script": {
                 "endpoint": "bibtex"
             },
-            "source_prep_scripts": [],
             "comment": ""
         },
         {
-            "filename": "search/CROSSREF.bib",
+            "filename": "data/search/CROSSREF.bib",
             "search_type": "DB",
-            "source_name": "CROSSREF",
+            "source_name": "crossref",
             "source_identifier": "https://api.crossref.org/works/{{doi}}",
-            "search_parameters": "SCOPE journal_issn='1466-4437'",
-            "search_script": {
-                "endpoint": "search_crossref"
+            "search_parameters": {
+                "scope": {
+                    "journal_issn": "1466-4437"
+                }
             },
-            "conversion_script": {
+            "load_conversion_script": {
                 "endpoint": "bibtex"
             },
-            "source_prep_scripts": [],
             "comment": ""
         }
     ],
