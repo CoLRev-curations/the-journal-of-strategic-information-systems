@@ -19,7 +19,7 @@
         "id_pattern": "three_authors_year",
         "share_stat_req": "processed",
         "delay_automated_processing": true,
-        "curation_url": "https://github.com/geritwagner/the-journal-of-strategic-information-systems",
+        "curation_url": "https://github.com/CoLRev-curations/the-journal-of-strategic-information-systems",
         "curated_masterdata": true,
         "curated_fields": [
             "doi",
