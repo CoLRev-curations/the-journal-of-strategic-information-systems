@@ -125,7 +125,7 @@ colrev environment --install geritwagner/the-journal-of-strategic-information-sy
 |1995-4-1      |               8|               8|               8|                |
 |1994-3-4      |               8|               8|               8|              NO|
 |1994-3-3      |               9|               9|               9|              NO|
-|1994-3-2      |              13|              13|           *1*10|              NO|
+|1994-3-2      |              13|              13|              11|              NO|
 |1994-3-1      |               6|               6|               6|                |
 |1993-2-4      |               7|               7|               6|              NO|
 |1993-2-3      |               6|               6|               6|                |
