@@ -26,7 +26,6 @@
             "endpoint": "colrev_built_in.dblp",
             "filename": "data/search/DBLP.bib",
             "search_type": "DB",
-            "source_identifier": "{{dblp_key}}",
             "search_parameters": {
                 "scope": {
                     "venue_key": "journals/jsis",
@@ -42,7 +41,6 @@
             "endpoint": "colrev_built_in.pdfs_dir",
             "filename": "data/search/pdfs.bib",
             "search_type": "PDFS",
-            "source_identifier": "{{file}}",
             "search_parameters": {
                 "scope": {
                     "subdir_pattern": "volume_number",
@@ -60,7 +58,6 @@
             "endpoint": "colrev_built_in.crossref",
             "filename": "data/search/CROSSREF.bib",
             "search_type": "DB",
-            "source_identifier": "https://api.crossref.org/works/{{doi}}",
             "search_parameters": {
                 "scope": {
                     "journal_issn": "1466-4437"
@@ -88,6 +85,9 @@
                     },
                     {
                         "endpoint": "colrev_built_in.exclude_languages"
+                    },
+                    {
+                        "endpoint": "colrev_built_in.exclude_complementary_materials"
                     }
                 ]
             },
@@ -143,9 +143,6 @@
                 "name": "low_confidence",
                 "similarity": 0.8,
                 "prep_package_endpoints": [
-                    {
-                        "endpoint": "colrev_built_in.correct_recordtype"
-                    },
                     {
                         "endpoint": "colrev_built_in.remove_nicknames"
                     },
