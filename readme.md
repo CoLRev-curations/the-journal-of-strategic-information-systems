@@ -234,7 +234,7 @@ colrev env --install geritwagner/the-journal-of-strategic-information-systems
 |1996-5-3      |               5|               5|            *1*5|              NO|
 |1996-5-2      |               7|               7|               7|                |
 |1996-5-1      |               7|               7|            *1*6|              NO|
-|1996-11-4     |            *32*|               -|               -|              NO|
+|1996-11-4     |            *31*|               -|               -|              NO|
 |1996-11-3     |            *14*|               -|               -|              NO|
 |1996-11-2     |            *14*|               -|               -|              NO|
 |1996-11-1     |            *16*|               -|               -|              NO|
@@ -274,7 +274,7 @@ colrev env --install geritwagner/the-journal-of-strategic-information-systems
 |1991-6-2      |            *30*|               -|               -|              NO|
 |1991-6-1      |            *18*|               -|               -|              NO|
 |1991-1-1      |               8|               8|               6|              NO|
-|1990-5-4      |            *21*|               -|               -|              NO|
+|1990-5-4      |            *19*|               -|               -|              NO|
 |1990-5-3      |            *23*|               -|               -|              NO|
 |1990-5-2      |            *30*|               -|               -|              NO|
 |1990-5-1      |            *26*|               -|               -|              NO|
