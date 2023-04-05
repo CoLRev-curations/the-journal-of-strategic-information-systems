@@ -11,3 +11,10 @@ To install run
 ```
 colrev environment --install geritwagner/the-journal-of-strategic-information-systems
 ```
+
+<!-- TABLE_SUMMARY -->
+
+|TOC           |all_merged      |
+|--------------|----------------|
+
+Legend: *md_imported*, md_processed, **pdf_prepared**

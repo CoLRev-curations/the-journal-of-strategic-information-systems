@@ -1,8 +1,11 @@
 *.bib.sav
 private_config.ini
-missing_pdf_files.csv
-manual_cleansing_statistics.csv
-data.csv
 venv
-.references_learned_settings
 .corrections
+data/pdfs
+.report.log
+__pycache__
+output
+data/pdf_get_man/missing_pdf_files.csv
+data/.tei/
+data/prep_man/records_prep_man.bib

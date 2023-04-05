@@ -1,0 +1,223 @@
+{
+    "project": {
+        "title": "the-journal-of-strategic-information-systems",
+        "authors": [
+            {
+                "name": "Gerit Wagner",
+                "initials": "GW",
+                "email": "gerit.wagner@hec.ca",
+                "orcid": null,
+                "contributions": [],
+                "affiliations": null,
+                "funding": [],
+                "identifiers": []
+            }
+        ],
+        "keywords": [],
+        "protocol": null,
+        "review_type": "curated_masterdata",
+        "id_pattern": "three_authors_year",
+        "share_stat_req": "processed",
+        "delay_automated_processing": false,
+        "colrev_version": "0.8.1",
+        "auto_upgrade": true
+    },
+    "sources": [
+        {
+            "endpoint": "colrev.dblp",
+            "filename": "data/search/DBLP.bib",
+            "search_type": "DB",
+            "search_parameters": {
+                "scope": {
+                    "venue_key": "journals/jsis",
+                    "journal_abbreviated": "J. Strateg. Inf. Syst."
+                }
+            },
+            "load_conversion_package_endpoint": {
+                "endpoint": "colrev.bibtex"
+            },
+            "comment": ""
+        },
+        {
+            "endpoint": "colrev.pdfs_dir",
+            "filename": "data/search/pdfs.bib",
+            "search_type": "PDFS",
+            "search_parameters": {
+                "scope": {
+                    "subdir_pattern": "volume_number",
+                    "type": "journal",
+                    "journal": "The Journal of Strategic Information Systems",
+                    "path": "data/pdfs"
+                }
+            },
+            "load_conversion_package_endpoint": {
+                "endpoint": "colrev.bibtex"
+            },
+            "comment": ""
+        },
+        {
+            "endpoint": "colrev.crossref",
+            "filename": "data/search/CROSSREF.bib",
+            "search_type": "DB",
+            "search_parameters": {
+                "scope": {
+                    "journal_issn": "0963-8687"
+                }
+            },
+            "load_conversion_package_endpoint": {
+                "endpoint": "colrev.bibtex"
+            },
+            "comment": ""
+        }
+    ],
+    "search": {
+        "retrieve_forthcoming": false
+    },
+    "load": {},
+    "prep": {
+        "fields_to_keep": [],
+        "prep_rounds": [
+            {
+                "name": "prep",
+                "similarity": 0.8,
+                "prep_package_endpoints": [
+                    {
+                        "endpoint": "colrev.resolve_crossrefs"
+                    },
+                    {
+                        "endpoint": "colrev.source_specific_prep"
+                    },
+                    {
+                        "endpoint": "colrev.exclude_non_latin_alphabets"
+                    },
+                    {
+                        "endpoint": "colrev.exclude_collections"
+                    },
+                    {
+                        "endpoint": "colrev.exclude_complementary_materials"
+                    },
+                    {
+                        "endpoint": "colrev.exclude_languages"
+                    },
+                    {
+                        "endpoint": "colrev.remove_urls_with_500_errors"
+                    },
+                    {
+                        "endpoint": "colrev.remove_broken_ids"
+                    },
+                    {
+                        "endpoint": "colrev.global_ids_consistency_check"
+                    },
+                    {
+                        "endpoint": "colrev.get_doi_from_urls"
+                    },
+                    {
+                        "endpoint": "colrev.get_year_from_vol_iss_jour"
+                    }
+                ]
+            }
+        ],
+        "prep_man_package_endpoints": [
+            {
+                "endpoint": "colrev.export_man_prep"
+            }
+        ]
+    },
+    "dedupe": {
+        "same_source_merges": "prevent",
+        "dedupe_package_endpoints": [
+            {
+                "endpoint": "colrev.curation_full_outlet_dedupe",
+                "selected_source": "data/search/CROSSREF.bib"
+            },
+            {
+                "endpoint": "colrev.curation_full_outlet_dedupe",
+                "selected_source": "data/search/DBLP.bib"
+            },
+            {
+                "endpoint": "colrev.curation_full_outlet_dedupe",
+                "selected_source": "data/search/pdfs.bib"
+            },
+            {
+                "endpoint": "colrev.curation_missing_dedupe"
+            }
+        ]
+    },
+    "prescreen": {
+        "explanation": "",
+        "prescreen_package_endpoints": []
+    },
+    "pdf_get": {
+        "pdf_path_type": "symlink",
+        "pdf_required_for_screen_and_synthesis": true,
+        "rename_pdfs": true,
+        "pdf_get_package_endpoints": [
+            {
+                "endpoint": "colrev.unpaywall"
+            },
+            {
+                "endpoint": "colrev.local_index"
+            }
+        ],
+        "pdf_get_man_package_endpoints": [
+            {
+                "endpoint": "colrev.colrev_cli_pdf_get_man"
+            }
+        ]
+    },
+    "pdf_prep": {
+        "keep_backup_of_pdfs": true,
+        "pdf_prep_package_endpoints": [
+            {
+                "endpoint": "colrev.pdf_check_ocr"
+            },
+            {
+                "endpoint": "colrev.remove_coverpage"
+            },
+            {
+                "endpoint": "colrev.remove_last_page"
+            },
+            {
+                "endpoint": "colrev.validate_pdf_metadata"
+            },
+            {
+                "endpoint": "colrev.validate_completeness"
+            },
+            {
+                "endpoint": "colrev.create_tei"
+            }
+        ],
+        "pdf_prep_man_package_endpoints": [
+            {
+                "endpoint": "colrev.colrev_cli_pdf_prep_man"
+            }
+        ]
+    },
+    "screen": {
+        "explanation": null,
+        "criteria": {},
+        "screen_package_endpoints": []
+    },
+    "data": {
+        "data_package_endpoints": [
+            {
+                "endpoint": "colrev.colrev_curation",
+                "curation_url": "https://github.com/CoLRev-curations/the-journal-of-strategic-information-systems",
+                "curated_masterdata": true,
+                "masterdata_restrictions": {
+                    "1991": {
+                        "ENTRYTYPE": "article",
+                        "volume": true,
+                        "number": true,
+                        "journal": "The Journal of Strategic Information Systems"
+                    }
+                },
+                "curated_fields": [
+                    "doi",
+                    "url",
+                    "dblp_key"
+                ]
+            }
+        ]
+    }
+}
