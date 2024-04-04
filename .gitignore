@@ -14,3 +14,5 @@ data/dedupe/
 .history
 .colrev
 data/data/sample_references.bib
+data/dedupe
+data/prep
