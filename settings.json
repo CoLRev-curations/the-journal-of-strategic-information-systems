@@ -54,11 +54,8 @@
             "filename": "data/search/CROSSREF.bib",
             "search_type": "TOC",
             "search_parameters": {
-                "scope": {
-                    "issn": [
-                        "0963-8687"
-                    ]
-                }
+                "url": "https://api.crossref.org/journals/0963-8687/works",
+                "version": "1.0.0"
             },
             "comment": ""
         }
@@ -66,13 +63,11 @@
     "search": {
         "retrieve_forthcoming": false
     },
-    "load": {},
     "prep": {
         "fields_to_keep": [],
         "prep_rounds": [
             {
                 "name": "prep",
-                "similarity": 0.8,
                 "prep_package_endpoints": [
                     {
                         "endpoint": "colrev.colrev_curation"
