@@ -19,50 +19,10 @@
         "id_pattern": "three_authors_year",
         "share_stat_req": "processed",
         "delay_automated_processing": false,
-        "colrev_version": "0.13.2",
+        "colrev_version": "0.14.0",
         "auto_upgrade": true
     },
-    "sources": [
-        {
-            "endpoint": "colrev.dblp",
-            "filename": "data/search/DBLP.bib",
-            "search_type": "TOC",
-            "search_parameters": {
-                "scope": {
-                    "venue_key": "journals/jsis",
-                    "journal_abbreviated": "J. Strateg. Inf. Syst."
-                }
-            },
-            "comment": ""
-        },
-        {
-            "endpoint": "colrev.files_dir",
-            "filename": "data/search/pdfs.bib",
-            "search_type": "FILES",
-            "search_parameters": {
-                "scope": {
-                    "subdir_pattern": "volume_number",
-                    "type": "journal",
-                    "journal": "The Journal of Strategic Information Systems",
-                    "path": "data/pdfs"
-                }
-            },
-            "comment": ""
-        },
-        {
-            "endpoint": "colrev.crossref",
-            "filename": "data/search/CROSSREF.bib",
-            "search_type": "TOC",
-            "search_parameters": {
-                "scope": {
-                    "issn": [
-                        "0963-8687"
-                    ]
-                }
-            },
-            "comment": ""
-        }
-    ],
+    "sources": [],
     "search": {
         "retrieve_forthcoming": false
     },
